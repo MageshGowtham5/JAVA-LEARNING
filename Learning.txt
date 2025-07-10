@@ -1,1 +1,56 @@
+Basic Introduction of JAVA:
+*JAVA is a platform independent by converting the high level codes into byte code by complilation or interpretation and
+that byte code is processed by the JVM( this is platform dependent).
+*Everything thing in java works based on Class and Objects.
+ex: Java Hello World Program
 
+        public class Main{
+            public static void main(String []args){
+                System.out.println("Hello World");
+            }
+        }
+
+*In the above example the public a access modifier which allows us to access the class or methods or variable.
+*class- class Keyword.
+*Main-Name of the class.
+*static-this also a access modifier which denotes the method which can access without creating the objects.
+*(String []args)-it denotes the arguments which is passed to the main method.
+*System.out.println("Hello World");-System is a class name, out-object, println-method,this all accessed by placing the
+ pointer(.),"Hello World"-String data type,(;)-semicolon need to be present at the end of the every declaration.
+
+ Running the Code:
+    *To run the code first we need to compile the code which is done by the javac(java compiler) which is in the part of
+     the jdk and the code Main.java is compiled then produce the byte code.
+    *To run the code by using Java command and the code is run by JVM.
+    *Then the file name and the java Main class name must be same.
+
+Why We Need Programming Languages:
+    *Basically the CPU(Central Processing Unit) Understand only the machine level language(Binary sequence 0's and 1's)
+    humans are not able to understand it or program it due to that the high level languages are developed(C,C++,Java..).
+    *That languages codes are in human readable and understandable form then that codes are converted into the low level
+    language by compiler and interpreter which converts the high level into low level (binary code) that code can be und
+    -erstand by the CPU based on the instruction written in the code the CPU perform the task like control the cache ,
+    Main and Storage memory.
+    *The Fetching and Retriving the data is done by the OS(operating System) which is act as a mediator between the User
+    ,CPU,etc... it also a Software which is execute during the booting of computer.
+
+    COMPILER(Just In Time Compilation(JIT)):                    INTERPRETER:
+    *Which convert the source code into the byte code           *it convert the code line by line.
+    directly.
+    *Fast campared to the interpreter.                          *Slow due to the line by line complilation.
+    *All errors are show at once.                               *Line by line errors are showen during the execution.
+    *ex:C,C++,JAVA..etc.                                        *ex:Python,JAVA,Ruby..etc.
+
+What is JRE(JAVA Runtime Environment):
+    *Which is used to run the code by providing the JVM,Java packages and other component for the execution of code.The
+    JRE is under the JDK(JAVA Development Kit).
+
+Static Type Languages:                	                            Dynamic Type Language:
+*We need mention what data type we are going to use(JAVA,C,C++).	*Not need to mention the data type the compiler will
+                                                                    allocate the memory to the data types(Python..etc).
+
+Variable Naming:
+	*The name should be starts with alphabets or underscore.(aaa,Aq,_ww).
+	*The name should not be keywords and not contain the special letters.
+	*For constant values need to use the full capital letters and with underscore.(MAX_VALUE=10).
+    *If a Variable contains more word means the words Starting should be in capital.(NameOfPerson).
