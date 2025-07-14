@@ -96,7 +96,8 @@ Non-Primitive Data Type:
                     }
                 }
 
-		*In the above example the p1 and p2 refer the same variable if any change happen in the p1 or p2 it will reflect on the both p1 and p2.
+		*In the above example the p1 and p2 refer the same variable if any change happen in the p1 or p2 it will reflect
+         on the both p1 and p2.
 		*This can be solved by creating the different object for both p1 and p2.
 		*The Heap memory is created when the object of the class is created.
 		*While creating the Non-Primitive variable the default value is assigned to the variable ex: int x;
@@ -105,7 +106,7 @@ Non-Primitive Data Type:
 
 Wrapper Class in Java:
 	*In java allow us to create a Non-primitive type of the primitive type using the Wrapper class. Ex: create Integer for int .
-	*This can very useful when we deal with object and mostly in generic. ex: Array[Integer].This will useful when we using            the references.
+	*This can very useful when we deal with object and mostly in generic. ex: Array[Integer].This will useful when we using the references.
 	*This allows us as to create basic data types as reference or class objects.
 	Autoboxing : converting the primitive to non-primitive using wrapper class.(int x=10 then Integer x2=x).
 	Auto Unboxing :converting the non-primitive to the primitive .(Integer x=18 then int x2=x).
