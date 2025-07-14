@@ -136,14 +136,19 @@ Type Conversion in Java:
 	*This is not following the widening order changes due to this the above point are happening.
 *In Java, Integer.parseInt() is a static method of the Integer wrapper class, used to convert a String representation of
  a number into its primitive int equivalent.
+
 JAVA INPUTS:
 	Which is two types :1.Bufferred Reader
 				        2.Scanner
-	*Bufferred Reader: It's a simple class which used to read a character or a sequence of characters or read line
+	1.Bufferred Reader: It's a simple class which used to read a character or a sequence of characters or read line
 	function is used to read the line.
 	*it's more faster than the Scanner, we can specifies the size range of the data.
 	*In java the packages are stored in the directories or in the folder ways java inside it contains the io etc.
-	*In the below example the "System.in" is an input stream of Byte stream then the
+	*In the below example the "System.in" is an input stream of Byte stream then it converted into a character 
+    stream and then it get readed by the buffer reader.
+    *And it throws the exceptions(IO).
+    *In general the buffer is used to read the large input because it allacate the large buffer.it mare synchronised 
+    when using multiple threads BufferedReader can be used.
     Ex:
         import java.io.*;
 
@@ -157,4 +162,67 @@ JAVA INPUTS:
                 System.out.println("You entered " + x);
             }
         }
-*Scanner: It's is an advanced version of reading the data,it is basically used to read the formatted input.
+    2.Scanner: It's is an advanced version of reading the data,it is basically used to read the formatted input. 
+    *It is much easier when compared to the String BufferedReader but it is slower then BufferedReader because it doing
+    some post processing in the code.
+                ex: import java.util.Scanner;
+                    class Test {
+                        public static void main(String[] args) {
+                            Scanner sc = new Scanner(System.in);
+
+                            String s = sc.nextLine();
+                            System.out.println("You Entered String: " + s);
+
+                            int x = sc.nextInt();
+                            System.out.println("You Entered Integer: " + x);
+
+                            float f = sc.nextFloat();
+                            System.out.println("You Entered Float: " + f);
+                        }
+                    }
+
+JAVA Output:
+        1.System.out.print()
+        2.System.out.println()
+        3.System.out.printf() or System.out.format()
+    1.System.out.print():                               2.System.out.println()
+        *It does't print a new line after printing.             *It print a new line after printing.
+    *The both print and println if it takes the non-primitive as an input means it will convert it into a string and then print.
+    And this explicitly written to handle the primitives also there some multiple versions which some handles the primitive types
+    and some can handle the primitive types.
+            ex:     class Test {
+                    public static void main(String[] args) {
+                        int x = 10, y = 20;
+                        char z = 'A';
+                        String str = "GFG";
+
+                        System.out.println(x);
+                        System.out.println(x + y);
+                        System.out.println(x + " " + y);
+                        System.out.print(str + " ");
+                        System.out.print("Course\n");
+                    }
+                }
+    3.System.out.printf() or System.out.format():
+    *It's mainly used to handle the formatting output like floating point numbers,dates,time.
+    *This contains the place holders in the output which is used to hold the place for the mentioned variable in the output function.
+            ex:     class Test {
+                    public static void main(String[] args) {
+                        int x = 100, y = 200;
+                        System.out.format("Value of x is : %d\n", x);
+
+                        float y1 = (float)Math.PI;
+                        System.out.println(y1);
+
+                        System.out.format("Value of PI = %.2f\n", y1);
+                        System.out.format("Value of PI = %5.2f\n", y1);
+                        System.out.format("Value of PI = %05.2f\n", y1);
+                        System.out.printf("x = %d, y = %d\n", x, y);
+                    }
+                }
+                *The place holder is used to reserve the place for the variable in the output statement like %d-for integer, 
+                %c-for character,%s-for string.
+                *As mentioned in the example the %2 is used to print the 2 number after the point,the %5.2 must contains the 5 char 
+                before the point if it not contains the 5 char means it will automatically filled it with the blank space for the required 
+                places to make it as 5 size like _3.14 it contains 5 places and the 2 number after the point.
+                *If we using like this %05.2f means it automatically fill the extra space with the 0 like 03.14.
