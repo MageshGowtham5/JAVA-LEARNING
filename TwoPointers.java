@@ -12,3 +12,22 @@
             }return true;
         }
     }
+//2.(LC no:392)Is Subsequence:
+    class Solution {
+        public boolean isSubsequence(String s, String t) {
+            int con=0;
+            boolean l=true;
+            for(int i=0;i<s.length();i++){
+                l=false;
+                for(int j=con;j<t.length();j++){
+                    if(s.charAt(i)==t.charAt(j)){
+                        con=j+1;
+                        l=true;
+                        break;
+                    }
+                }if(l==false){
+                    break;
+                }
+            }return l;
+        }
+    }
