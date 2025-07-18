@@ -1,0 +1,105 @@
+*List interface is impleamented by the ArrayList in java.Then list interface inherite for the collection interface it 
+means that the collection allow us to us all the build in functions from the collection function like : ArrayList, 
+AbstractList, LinkedList etc... Those functions are contains only common implementation only like remove(int n),etc..
+#We can change the inplementation fo the function in the collections type:
+        ex: List<Integer> list=new ArrayList<Integer>();
+            //we can change it implementations in code like below
+            List<Integer> list=new LinkedList<Integer>();
+        Explaination:
+            *List-> Type of elements has to be.
+            *Integer-> Wrapper class DataType.
+            *new->creating the object.
+            *LinkedList->The type of implementation we only use the functions of that implementation class.
+            *This is the changing the data structure without changing the codes.
+List Iterator:
+    *It is used to inherite the Iterator function for the list class.
+        ex: functionalities:
+            *hasPrevious()-it used to check whether any previous element present or not.
+            *previous()-used to return the previous element and move to one element backward.
+            *add()-used to add items while iterating through the list.
+            *set()-is used to change the existing value.
+            *nextIndex()-return the indexes of the next item.
+            *previousIndex()-return the indexes of the previous item.
+    #There are two ways to traverse a list,one through the forwars iteration,then through the reverse iteration,the 
+    other iterators are worked in forward iterations only.
+    *Has per the previous inherite of the iterator in list class we can use the iterator methods also:
+        ex: next()-return the next item then move the index one position forward.
+            hasNext()-check is there any element in next position.
+            remove()-to remove the item.
+            listIterator()-used to iterate the list from the index 0.
+            listiterator(int index)-used to iterate the list from the mentioned index.
+        ex: \\For forward iteration:
+            import java.util.*;
+            class Gfg
+            {
+                public static void main(String args[])
+                {
+                    List<Integer> list = new ArrayList<Integer>();
+                    list.add(10);
+                    list.add(20);
+                    list.add(30);
+
+                    ListIterator<Integer> it = list.listIterator();
+                    while(it.hasNext())
+                    {
+                        System.out.println(it.next());
+                    }
+                }
+            }
+            output:
+                    10
+                    20
+                    30
+            \\reverse iteration
+            import java.util.*;
+                class Gfg
+                {
+                    public static void main(String args[])
+                    {
+                        List<Integer> list = new ArrayList<Integer>();
+                        list.add(10);
+                        list.add(20);
+                        list.add(30);
+
+                        ListIterator<Integer> it = list.listIterator(list.size());
+                        while(it.hasPrevious())
+                        {
+                            System.out.println(it.previous());
+                            //if with set method means it will
+                            //it.set(x*2);
+                        }
+                        //S.out.p(list);
+                    }
+                }
+            output:             output: for if set present
+                    30                  20
+                    20                  40
+                    10                  60 
+
+Arraylist in Java:
+    Syntax: ArrayList<Integer>al=new Arraylist<Integer>();
+    advantages:
+            *Dynamic Size allocation.
+            *Rich library functions like: add(),remove()etc...
+    *To use array list we need to import java.util.Arraylist;
+    ex: import java.util.ArrayList;
+        class Test
+        {
+            public static void main(String args[])
+            {
+                ArrayList<Integer> al = new ArrayList<Integer>();
+                al.add(10);//add() fun add the element by default at he end
+                al.add(20);
+                al.add(30);
+
+                System.out.println(al);
+            }
+        }
+        output:
+            [10,02,30]
+
+    How ArrayList work internally:
+        *It's kind of wrapper over normal array and Dynamic resizing.
+        *copy the old array to new and double the array then free the old array memory.
+        *random access for more information check the Arrays in DSA in repo.
+        *The extra elements add then the mentioned size is the costly one like n+1 it is Thete(n) but for n is Theta(1).
