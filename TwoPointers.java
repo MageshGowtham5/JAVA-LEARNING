@@ -47,3 +47,18 @@
             }return new int[]{-1,-1};
         }
     }
+//3.(LC no:11)Container With Most Water
+    class Solution {
+        public int maxArea(int[] h) {
+            int left=0,right=h.length-1,max=0;
+            while(left<right){
+                max=Math.max(max,Math.min(h[left],h[right])*(right-left));
+                if(h[left]<h[right]){
+                    left++;
+                }
+                else{
+                    right--;
+                }
+            }return max;
+        }
+    }
