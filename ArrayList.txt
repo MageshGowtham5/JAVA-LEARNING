@@ -222,5 +222,5 @@ code:import java.util.*;
                 Odd numbers:
                 1 3 5
 
-
+ArrayList is a Class it impleaments list,collection and iterable interfaces in it.
      
