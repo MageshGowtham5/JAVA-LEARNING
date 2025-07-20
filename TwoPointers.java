@@ -47,7 +47,7 @@
             }return new int[]{-1,-1};
         }
     }
-//3.(LC no:11)Container With Most Water
+//3.(LC no:11)Container With Most Water:
     class Solution {
         public int maxArea(int[] h) {
             int left=0,right=h.length-1,max=0;
@@ -60,5 +60,32 @@
                     right--;
                 }
             }return max;
+        }
+    }
+//4.(LC no:15)3Sum:
+    class Solution {
+        public List<List<Integer>> threeSum(int[] nums) {
+            int target=0;
+            Arrays.sort(nums);
+            Set<List<Integer>> s=new HashSet<>();
+            List<List<Integer>> op=new ArrayList<>();
+            for(int i=0;i<nums.length-2;i++){
+                int j=i+1;
+                int k=nums.length-1;
+                while(j<k){
+                    int sum=nums[i]+nums[j]+nums[k];
+                    if(sum==target){
+                        s.add(Arrays.asList(nums[i],nums[j],nums[k]));
+                        j++;
+                        k--;
+                    }
+                    else if(sum<target){
+                        j++;
+                    }else{
+                        k--;
+                    }
+                }
+            }op.addAll(s);
+            return op;
         }
     }
