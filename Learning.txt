@@ -226,3 +226,28 @@ JAVA Output:
                 before the point if it not contains the 5 char means it will automatically filled it with the blank space for the required 
                 places to make it as 5 size like _3.14 it contains 5 places and the 2 number after the point.
                 *If we using like this %05.2f means it automatically fill the extra space with the 0 like 03.14.
+STRING:
+    *String is Immutable. So we can't able to change the String value.If suppose it happens means using the String Build-in function,if will 
+    create the new object for the new string value and store in it and delete the old object it will costly.
+    String Methods:
+                *length()-return length of the string.
+                *charAt(index)-return char at the mentioned index.
+                *indexOf(str)-return the index of the String.
+                *indexOf(str,fromIndex)-return index of the string and mention the starting index.
+                *lastIndexOf(str)-return the last index of the string.
+                *lastIndexOf(str,from Index)-return last index form the mentioned index.
+                *compareTo(str)-compare the two strings and return true or flase.
+                *substring(start index)-return the sub string from mentioned index.
+                *substring(start index,end index)-return the substring between the start and ending index.
+                *chars()-this will allows us to create the Stream of string this will helpfull while impleamenting the heap and for other class.
+                The above methods are the common methods which is present in both String, String buffer and builder.this are some example Methods
+                there are many methods present. 
+            #In String Methods it can allows char as an arguments, but in String buffer or Builder only allows the String as an arguments.
+    *For changing the String in to the mutable we are using the String Builder and String Buffer.
+    Basic example:
+        *String Builder:
+            *it will allow us to change the original object for that string. Not creating the new object.it does not contains thread safty.
+            for single threaded environment.
+            
+        *String Buffer:
+            *it is same as the String Builder but it contains is thread safty. For multi Thread environment.
