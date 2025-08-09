@@ -276,5 +276,13 @@ STRING:
                     }
 
                 *The above program will check wether the given string is pangram(it means all alphabets are present in a string or not without the
-                case sensitive) or not 
+                case sensitive) or not.
+Comparable Interface:
+    *This comparable interface which contains the build in function which compare the elements in different order which are already impleamented in
+    java package.This is known as natural ordering to sort.
+    example:sort(),min(),max()...etc.
+Comparator Interface:
+    *This is created by the user based on there requirement the compartion is done.ex: compare the values are done by the user impleamented manner.
+    *At first we need to declear the comparator class.Then the functional interface get impleamented by only using the comparation interface.there 
+    are many methods present in the comparator interface.
 
