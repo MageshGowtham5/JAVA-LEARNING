@@ -175,3 +175,26 @@
             return val+roman.get(s.charAt(s.length()-1));
         }
     }
+
+//12.(LC no:16)3Sum Closest:
+    class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int sum=0;
+        int close=Integer.MAX_VALUE;
+        for(int i=0;i<nums.length-2;i++){
+            int j=i+1,k=nums.length-1;
+            while(j<k){
+                sum=nums[i]+nums[j]+nums[k];
+                if(Math.abs(target-sum)<Math.abs(target-close)){
+                    close=sum;
+                }
+                if(sum<target){
+                    j++;
+                }else{
+                    k--;
+                }
+            }
+        }return close;
+    }
+}
