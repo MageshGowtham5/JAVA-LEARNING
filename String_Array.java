@@ -198,3 +198,24 @@
         }return close;
     }
 }
+
+//13.(LC no:58)Length of Last Word:
+    class Solution {
+        public int lengthOfLastWord(String s) {
+            int n=s.length(),j=0,count=0;
+            for(int i=n-1;i>=0;i--){
+                if(s.charAt(i)!=' '){
+                    j=i;
+                    break;
+                }
+            }
+            for(int z=j;z>=0;z--){
+                if(s.charAt(z)!=' '){
+                    count++;
+                }else{
+                    break;
+                }
+            }
+            return count;
+        }
+    }
